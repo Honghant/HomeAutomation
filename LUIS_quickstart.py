@@ -51,7 +51,7 @@ def convert_to_bytes(file_or_bytes, resize=None):
     del img
     return bio.getvalue()
 
-
+'''
 
 # --------------------------------- Define Layout ---------------------------------
 
@@ -102,4 +102,5 @@ while True:
             print(f'** Error {E} **')
             pass        # something weird happened making the full filename
 # --------------------------------- Close & Exit ---------------------------------
-window.close()
+
+'''

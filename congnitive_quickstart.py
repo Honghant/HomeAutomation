@@ -137,7 +137,7 @@ def Judement_English(intent, entity):
         judement_result = "AllYellow"
     elif (intent == "Change Color" and (entity['location'] == ['on the desk'] or entity['location'] == ['on the left']) and entity['color'] == ['green']):
         judement_result = "DeskGreen"
-    elif (intent == "Change Color" and (entity['location'] == ['on the right'] or entity['location'] == ['on the floor']) and entity['color' == ['green']]):
+    elif (intent == "Change Color" and (entity['location'] == ['on the right'] or entity['location'] == ['on the floor']) and entity['color'] == ['green']):
         judement_result = "FloorGreen"
     elif (intent == "Change Color" and (entity['location'] == ['on the desk'] or entity['location'] == ['on the left']) and entity['color'] == ['yellow']):
         judement_result = "DeskYellow"
@@ -156,7 +156,7 @@ def Judement_Chinese(intent, entity):
         judment_result = "DeskOn"
     elif (intent == "关灯" and (entity['位置'] == ['左边'] or entity['位置'] == ['桌子上'] or entity['位置'] == ['台'])):
         judment_result = 'DeskOff'
-    elif (intent == "开灯" and (entity['位置'] == ['右边'] or entity['位置'] == ['地上'] or entity['位置'] == ['地上'])):
+    elif (intent == "开灯" and (entity['位置'] == ['右边'] or entity['位置'] == ['地上'] or entity['位置'] == ['地板上'])):
         judment_result = "FloorOn"
     elif (intent == "关灯" and (entity['位置'] == ['右边'] or entity['位置'] == ['地板上'] or entity['位置'] == ['地上'])):
         judment_result = 'FloorOff'

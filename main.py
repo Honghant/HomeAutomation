@@ -70,6 +70,8 @@ def Con_gui(win_main,Subscription,ServiceRegion):
 
     win_con = sg.Window('StoU语义理解',layout_Con,font = ("宋体",15),size = (1000,500),finalize=True)
 
+
+
 #    win_con.Read()
 
     win_con['-Desk-'].update(data=LUIS_quickstart.convert_to_bytes(filename_Desk))
@@ -77,11 +79,11 @@ def Con_gui(win_main,Subscription,ServiceRegion):
     """While Loop here is for recognizing more than once, but may be improved in the following development"""
     while True:
         con_event, con_values = win_con.Read()
-
+        lang = con_values['-Lang-']
         if con_event == '开始识别':
             while True:
-                result = congnitive_quickstart.Read(Subscription,ServiceRegion)
-                if result == "No_Match":
+                result = congnitive_quickstart.Read(Subscription,ServiceRegion,lang)
+                if result == "End" or result == "No_Match":
                     break
                 elif result == 'AllOn':
                     filename_Desk = cwd + '/image/desk-yellow.png'
@@ -120,6 +122,12 @@ def Con_gui(win_main,Subscription,ServiceRegion):
                     win_con['-Desk-'].update(data=LUIS_quickstart.convert_to_bytes(filename_Desk))
                 elif result == "FloorGreen":
                     filename_Floor = cwd + '/image/floor-green.png'
+                    win_con['-Floor-'].update(data=LUIS_quickstart.convert_to_bytes(filename_Floor))
+                elif result == "DeskYellow":
+                    filename_Desk = cwd + '/image/desk-yellow.png'
+                    win_con['-Desk-'].update(data=LUIS_quickstart.convert_to_bytes(filename_Desk))
+                elif result == "FloorYellow":
+                    filename_Floor = cwd + '/image/floor-yellow.png'
                     win_con['-Floor-'].update(data=LUIS_quickstart.convert_to_bytes(filename_Floor))
 
 

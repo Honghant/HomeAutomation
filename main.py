@@ -47,6 +47,42 @@ def main_gui(): # 程序主界面
 
     win_main.close()
 
+def Update_Image(result,win_con,cwd):
+    if result == 'AllOn':
+        filename_Desk = cwd + '/image/desk-yellow.png'
+        filename_Floor = cwd + '/image/floor-yellow.png'
+        win_con['-Desk-'].update(data=LUIS_quickstart.convert_to_bytes(filename_Desk))
+        win_con['-Floor-'].update(data=LUIS_quickstart.convert_to_bytes(filename_Floor))
+    elif result =="AllOff":
+        filename_Desk = cwd +'/image/desk-off.png'
+        filename_Floor = cwd + '/image/floor-off.png'
+        win_con['-Desk-'].update(data=LUIS_quickstart.convert_to_bytes(filename_Desk))
+        win_con['-Floor-'].update(data=LUIS_quickstart.convert_to_bytes(filename_Floor))
+    elif result =="DeskOn":
+        filename_Desk = cwd + '/image/desk-yellow.png'
+        win_con['-Desk-'].update(data=LUIS_quickstart.convert_to_bytes(filename_Desk))
+    elif result == "DeskOff":
+        filename_Desk = cwd + '/image/desk-off.png'
+        win_con['-Desk-'].update(data=LUIS_quickstart.convert_to_bytes(filename_Desk))
+    elif result == "FloorOn":
+        filename_Floor = cwd + '/image/floor-yellow.png'
+        win_con['-Floor-'].update(data=LUIS_quickstart.convert_to_bytes(filename_Floor))
+    elif result == "FloorOff":
+        filename_Floor = cwd + '/image/floor-off.png'
+        win_con['-Floor-'].update(data=LUIS_quickstart.convert_to_bytes(filename_Floor))
+    elif result == "AllGreen":
+        filename_Desk = cwd + '/image/desk-green.png'
+        filename_Floor = cwd + '/image/floor-green.png'
+        win_con['-Desk-'].update(data=LUIS_quickstart.convert_to_bytes(filename_Desk))
+        win_con['-Floor-'].update(data=LUIS_quickstart.convert_to_bytes(filename_Floor))
+    elif result == "DeskGreen":
+        filename_Desk = cwd + '/image/desk-green.png'
+        win_con['-Desk-'].update(data=LUIS_quickstart.convert_to_bytes(filename_Desk))
+    elif result == "FloorGreen":
+        filename_Floor = cwd + '/image/floor-green.png'
+        win_con['-Floor-'].update(data=LUIS_quickstart.convert_to_bytes(filename_Floor))
+
+
 
 def Con_gui(win_main,Subscription,ServiceRegion):
     win_main.Hide()
@@ -83,55 +119,14 @@ def Con_gui(win_main,Subscription,ServiceRegion):
         if con_event == '开始识别':
             while True:
                 result = congnitive_quickstart.Read(Subscription,ServiceRegion,lang)
-                if result == "End" or result == "No_Match":
+                if result == "end" :
+                    if lang == "English":
+                        print("Stop Detecting")
+                    else:
+                        print("停止识别")
                     break
-                elif result == 'AllOn':
-                    filename_Desk = cwd + '/image/desk-yellow.png'
-                    filename_Floor = cwd + '/image/floor-yellow.png'
-                    win_con['-Desk-'].update(data=LUIS_quickstart.convert_to_bytes(filename_Desk))
-                    win_con['-Floor-'].update(data=LUIS_quickstart.convert_to_bytes(filename_Floor))
-                elif result =="AllOff":
-                    filename_Desk = cwd +'/image/desk-off.png'
-                    filename_Floor = cwd + '/image/floor-off.png'
-                    win_con['-Desk-'].update(data=LUIS_quickstart.convert_to_bytes(filename_Desk))
-                    win_con['-Floor-'].update(data=LUIS_quickstart.convert_to_bytes(filename_Floor))
-                elif result =="DeskOn":
-                    filename_Desk = cwd + '/image/desk-yellow.png'
-                    win_con['-Desk-'].update(data=LUIS_quickstart.convert_to_bytes(filename_Desk))
-                elif result == "DeskOff":
-                    filename_Desk = cwd + '/image/desk-off.png'
-                    win_con['-Desk-'].update(data=LUIS_quickstart.convert_to_bytes(filename_Desk))
-                elif result == "FloorOn":
-                    filename_Floor = cwd + '/image/floor-yellow.png'
-                    win_con['-Floor-'].update(data=LUIS_quickstart.convert_to_bytes(filename_Floor))
-                elif result == "FloorOff":
-                    filename_Floor = cwd + '/image/floor-off.png'
-                    win_con['-Floor-'].update(data=LUIS_quickstart.convert_to_bytes(filename_Floor))
-                elif result == "AllGreen":
-                    filename_Desk = cwd + '/image/desk-green.png'
-                    filename_Floor = cwd + '/image/floor-green.png'
-                    win_con['-Desk-'].update(data=LUIS_quickstart.convert_to_bytes(filename_Desk))
-                    win_con['-Floor-'].update(data=LUIS_quickstart.convert_to_bytes(filename_Floor))
-                elif result == "AllYellow":
-                    filename_Desk = cwd + '/image/desk-yellow.png'
-                    filename_Floor = cwd + '/image/floor-yellow.png'
-                    win_con['-Desk-'].update(data=LUIS_quickstart.convert_to_bytes(filename_Desk))
-                    win_con['-Floor-'].update(data=LUIS_quickstart.convert_to_bytes(filename_Floor))
-                elif result == "DeskGreen":
-                    filename_Desk = cwd + '/image/desk-green.png'
-                    win_con['-Desk-'].update(data=LUIS_quickstart.convert_to_bytes(filename_Desk))
-                elif result == "FloorGreen":
-                    filename_Floor = cwd + '/image/floor-green.png'
-                    win_con['-Floor-'].update(data=LUIS_quickstart.convert_to_bytes(filename_Floor))
-                elif result == "DeskYellow":
-                    filename_Desk = cwd + '/image/desk-yellow.png'
-                    win_con['-Desk-'].update(data=LUIS_quickstart.convert_to_bytes(filename_Desk))
-                elif result == "FloorYellow":
-                    filename_Floor = cwd + '/image/floor-yellow.png'
-                    win_con['-Floor-'].update(data=LUIS_quickstart.convert_to_bytes(filename_Floor))
-
-
-
+                else:
+                    Update_Image(result,win_con,cwd)
 
         if con_event in (None,'退出'):
             break
@@ -143,3 +138,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+

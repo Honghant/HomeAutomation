@@ -2,18 +2,7 @@ import azure.cognitiveservices.speech as speechsdk
 import json
 import requests
 
-
-# Creates an instance of a speech config with specified subscription key and service region.
-# Replace with your own subscription key and service region (e.g., "westus").
-#speech_key, service_region = "YourSubscriptionKey", "YourServiceRegion"
-#speech_config = speechsdk.SpeechConfig(subscription=speech_key, region=service_region)
-
-# Creates a recognizer with the given settings
-# speech_recognizer = speechsdk.SpeechRecognizer(speech_config=speech_config)
-
-
-
-def Read(Subscription,Region,lang):
+def Read(Subscription,Region,lang,win_con):
     #the default language is English, so flag should be defaultly set to 0
 
     print("Say something...")
@@ -63,6 +52,10 @@ def Read(Subscription,Region,lang):
         intent = data['prediction']['topIntent']
         entity = data['prediction']['entities']
 
+
+
+
+
         result = Judement(intent,entity,lang)
 
 
@@ -80,6 +73,9 @@ def Read(Subscription,Region,lang):
 
 # </IntentRecognitionOnceWithMic>
 
+
+#Judement Function is to return the
+#
 def Judement(intent, entity,lang):
     if (intent == "All On"):
         if lang == "English":
@@ -130,8 +126,6 @@ def Judement(intent, entity,lang):
                 judement_result = "FloorOff"
     elif (intent == "None"):
         judement_result = "end"
-
-
 
     return judement_result
 

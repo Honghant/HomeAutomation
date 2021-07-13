@@ -71,14 +71,18 @@ def Read(Subscription,Region,lang,win_con):
                 if (win_con['-On-'].get() == False):
                     win_con['-On-'].update(value=True)
                     win_con['-Temp-'].update(f"25")
+                    win_con['-Temp-Slider-'].update('25')
                     win_con['-Hum-'].update(f'50')
+                    win_con['-Hum-Slider-'].update('50')
                 if ("AcOn" in entity or "temperature" in entity):
                     temper = entity['number'][0]
 
                     win_con['-Temp-'].update(temper)
+                    win_con['-Temp-Slider-'].update(temper)
                 elif ("Humidity" in entity or "percentage" in entity):
                     humi = entity['-number-'][0]
                     win_con['-Hum-'].update(humi)
+                    win_con['-Hum-Slider-'].update(humi)
                 result = "AC"
         elif (intent == "AC Up"):
             if "Humidity" in entity:
@@ -86,11 +90,13 @@ def Read(Subscription,Region,lang,win_con):
                 Raise_Humi = entity['number'][0]
                 Curr_Humi = Orin_Humi + Raise_Humi
                 win_con['-Hum-'].update(Curr_Humi)
+                win_con['-Hum-Slider-'].update(Curr_Humi)
                 result = "AC"
             else:
                 Orin_Temp = int(win_con['-Temp-'].get())
                 Raise_Temp = entity['number'][0]
                 Curr_Temp = Orin_Temp + Raise_Temp
+                win_con['-Temp-'].update(Curr_Temp)
                 win_con['-Temp-'].update(Curr_Temp)
                 result = "AC"
         elif intent == "AC Down":
@@ -99,18 +105,22 @@ def Read(Subscription,Region,lang,win_con):
                 Raise_Humi = entity['number'][0]
                 Curr_Humi = Orin_Humi - Raise_Humi
                 win_con['-Hum-'].update(Curr_Humi)
+                win_con['-Hum-Slider-'].update(Curr_Humi)
                 result = "AC"
             else:
                 Orin_Temp = int(win_con['-Temp-'].get())
                 Raise_Temp = entity['number'][0]
                 Curr_Temp = Orin_Temp - Raise_Temp
                 win_con['-Temp-'].update(Curr_Temp)
+                win_con['-Temp-Slider-'].update(Curr_Temp)
                 result = "AC"
         elif (intent == "AC Off"):
             win_con['-Off-'].update(value=True)
             win_con['-On-'].update(value=False)
             win_con['-Temp-'].update("")
+            win_con['-Temp-Slider-'].update("10")
             win_con['-Hum-'].update("")
+            win_con['-Hum-Slider-'].update("0")
             result = "AC"
         else:
             result = Judement(intent,entity,lang)
@@ -283,8 +293,14 @@ def Con_gui(win_main,Subscription,ServiceRegion):
     AC_col = [
         [sg.Text("Air Condition")],
         [sg.Radio("On","RADIO1",key= '-On-'),sg.Radio("Off","RADIO1",default=True,key='-Off-')],
+        [],
         [sg.Text("Temperature(Celsius Degree)/温度(摄氏度)",size=(40,2)),sg.Text(key='-Temp-',size=(20,2))],
-        [sg.Text("Humidity(%)/湿度(%)",size=(40,2)),sg.Text(key='-Hum-',size=(20,2))]
+        [],
+        [sg.Text("Temperature Visualizer"),sg.Slider((10,40),key='-Temp-Slider-',enable_events=True,orientation='h')],
+        [],
+        [sg.Text("Humidity(%)/湿度(%)",size=(40,2)),sg.Text(key='-Hum-',size=(20,2))],
+        [],
+        [sg.Text("Humidity Visualizer"),sg.Slider((0,100),key='-Hum-Slider-',enable_events=True,orientation='h')]
     ]
 
     layout_Con =[[sg.Column(left_col,element_justification='c'),sg.Column(images_col,element_justification='c'),sg.Column(AC_col,justification='c')]]
@@ -293,7 +309,7 @@ def Con_gui(win_main,Subscription,ServiceRegion):
     filename_Desk = cwd + '/image/desk-off.png'
     filename_Floor = cwd + '/image/floor-off.png'
 
-    win_con = sg.Window('StoU语义理解',layout_Con,font = ("宋体",15),size = (1600,500),finalize=True)
+    win_con = sg.Window('StoU语义理解',layout_Con,font = ("宋体",15),size = (1500,500),finalize=True)
 
 
 

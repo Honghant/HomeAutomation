@@ -1,0 +1,1027 @@
+{
+  "luis_schema_version": "7.0.0",
+  "intents": [
+    {
+      "name": "AC Down",
+      "features": []
+    },
+    {
+      "name": "AC Off",
+      "features": []
+    },
+    {
+      "name": "AC On",
+      "features": []
+    },
+    {
+      "name": "AC Up",
+      "features": []
+    },
+    {
+      "name": "All Off",
+      "features": []
+    },
+    {
+      "name": "All On",
+      "features": []
+    },
+    {
+      "name": "Light Off",
+      "features": []
+    },
+    {
+      "name": "Light On",
+      "features": []
+    },
+    {
+      "name": "None",
+      "features": []
+    }
+  ],
+  "entities": [
+    {
+      "name": "AcOn",
+      "children": [],
+      "roles": [],
+      "features": []
+    },
+    {
+      "name": "Humidity",
+      "children": [],
+      "roles": [],
+      "features": []
+    },
+    {
+      "name": "位置",
+      "children": [],
+      "roles": [],
+      "features": []
+    },
+    {
+      "name": "停止",
+      "children": [],
+      "roles": [],
+      "features": []
+    },
+    {
+      "name": "颜色",
+      "children": [],
+      "roles": [],
+      "features": []
+    }
+  ],
+  "hierarchicals": [],
+  "composites": [],
+  "closedLists": [],
+  "prebuiltEntities": [
+    {
+      "name": "datetimeV2",
+      "roles": [
+        "Duration",
+        "Time"
+      ]
+    },
+    {
+      "name": "number",
+      "roles": []
+    },
+    {
+      "name": "ordinal",
+      "roles": []
+    },
+    {
+      "name": "percentage",
+      "roles": []
+    },
+    {
+      "name": "temperature",
+      "roles": []
+    }
+  ],
+  "utterances": [
+    {
+      "text": "停止识别",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "停止",
+          "startPos": 0,
+          "endPos": 1,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "全关",
+      "intent": "All Off",
+      "entities": []
+    },
+    {
+      "text": "全开",
+      "intent": "All On",
+      "entities": [
+        {
+          "entity": "颜色",
+          "startPos": 1,
+          "endPos": 1,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "全部关闭",
+      "intent": "All Off",
+      "entities": []
+    },
+    {
+      "text": "全部变成绿色",
+      "intent": "All On",
+      "entities": [
+        {
+          "entity": "颜色",
+          "startPos": 4,
+          "endPos": 5,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "全部变成黄色",
+      "intent": "All On",
+      "entities": [
+        {
+          "entity": "颜色",
+          "startPos": 4,
+          "endPos": 5,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "全部开。",
+      "intent": "All On",
+      "entities": [
+        {
+          "entity": "颜色",
+          "startPos": 2,
+          "endPos": 2,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "全部的灯都关了",
+      "intent": "All Off",
+      "entities": []
+    },
+    {
+      "text": "关掉右边的灯",
+      "intent": "Light Off",
+      "entities": [
+        {
+          "entity": "位置",
+          "startPos": 2,
+          "endPos": 3,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "关掉地板上的灯",
+      "intent": "Light Off",
+      "entities": [
+        {
+          "entity": "位置",
+          "startPos": 2,
+          "endPos": 4,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "关掉左边的灯",
+      "intent": "Light Off",
+      "entities": [
+        {
+          "entity": "位置",
+          "startPos": 2,
+          "endPos": 3,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "关掉桌子上的灯",
+      "intent": "Light Off",
+      "entities": [
+        {
+          "entity": "位置",
+          "startPos": 2,
+          "endPos": 4,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "关掉空调",
+      "intent": "AC Off",
+      "entities": []
+    },
+    {
+      "text": "关灯",
+      "intent": "All Off",
+      "entities": []
+    },
+    {
+      "text": "关闭台灯",
+      "intent": "Light Off",
+      "entities": [
+        {
+          "entity": "位置",
+          "startPos": 2,
+          "endPos": 2,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "关闭地板上的灯",
+      "intent": "Light Off",
+      "entities": [
+        {
+          "entity": "位置",
+          "startPos": 2,
+          "endPos": 4,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "关闭所有的灯",
+      "intent": "All Off",
+      "entities": []
+    },
+    {
+      "text": "关闭空调",
+      "intent": "AC Off",
+      "entities": []
+    },
+    {
+      "text": "右边的灯变成绿色",
+      "intent": "Light On",
+      "entities": [
+        {
+          "entity": "位置",
+          "startPos": 0,
+          "endPos": 1,
+          "children": []
+        },
+        {
+          "entity": "颜色",
+          "startPos": 6,
+          "endPos": 7,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "右边的灯变成黄色",
+      "intent": "Light On",
+      "entities": [
+        {
+          "entity": "位置",
+          "startPos": 0,
+          "endPos": 1,
+          "children": []
+        },
+        {
+          "entity": "颜色",
+          "startPos": 6,
+          "endPos": 7,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "地上的灯变成绿色",
+      "intent": "Light On",
+      "entities": [
+        {
+          "entity": "位置",
+          "startPos": 0,
+          "endPos": 1,
+          "children": []
+        },
+        {
+          "entity": "颜色",
+          "startPos": 6,
+          "endPos": 7,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "地上的灯变成黄色",
+      "intent": "Light On",
+      "entities": [
+        {
+          "entity": "位置",
+          "startPos": 0,
+          "endPos": 1,
+          "children": []
+        },
+        {
+          "entity": "颜色",
+          "startPos": 6,
+          "endPos": 7,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "左边的灯变成绿色",
+      "intent": "Light On",
+      "entities": [
+        {
+          "entity": "位置",
+          "startPos": 0,
+          "endPos": 1,
+          "children": []
+        },
+        {
+          "entity": "颜色",
+          "startPos": 6,
+          "endPos": 7,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "左边的灯变成黄色",
+      "intent": "Light On",
+      "entities": [
+        {
+          "entity": "位置",
+          "startPos": 0,
+          "endPos": 1,
+          "children": []
+        },
+        {
+          "entity": "颜色",
+          "startPos": 6,
+          "endPos": 7,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "开灯",
+      "intent": "All On",
+      "entities": [
+        {
+          "entity": "颜色",
+          "startPos": 0,
+          "endPos": 0,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "所有的灯变成黄色",
+      "intent": "All On",
+      "entities": [
+        {
+          "entity": "颜色",
+          "startPos": 6,
+          "endPos": 7,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "所有的灯都变成绿色",
+      "intent": "All On",
+      "entities": [
+        {
+          "entity": "颜色",
+          "startPos": 7,
+          "endPos": 8,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "打开全部的灯",
+      "intent": "All On",
+      "entities": [
+        {
+          "entity": "颜色",
+          "startPos": 1,
+          "endPos": 1,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "打开台灯",
+      "intent": "Light On",
+      "entities": [
+        {
+          "entity": "颜色",
+          "startPos": 1,
+          "endPos": 1,
+          "children": []
+        },
+        {
+          "entity": "位置",
+          "startPos": 2,
+          "endPos": 2,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "打开右边的灯",
+      "intent": "Light On",
+      "entities": [
+        {
+          "entity": "颜色",
+          "startPos": 1,
+          "endPos": 1,
+          "children": []
+        },
+        {
+          "entity": "位置",
+          "startPos": 2,
+          "endPos": 3,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "打开地板上的灯",
+      "intent": "Light On",
+      "entities": [
+        {
+          "entity": "颜色",
+          "startPos": 1,
+          "endPos": 1,
+          "children": []
+        },
+        {
+          "entity": "位置",
+          "startPos": 2,
+          "endPos": 4,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "打开左边的灯",
+      "intent": "Light On",
+      "entities": [
+        {
+          "entity": "颜色",
+          "startPos": 1,
+          "endPos": 1,
+          "children": []
+        },
+        {
+          "entity": "位置",
+          "startPos": 2,
+          "endPos": 3,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "打开所有的灯",
+      "intent": "All On",
+      "entities": [
+        {
+          "entity": "颜色",
+          "startPos": 1,
+          "endPos": 1,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "打开桌子上的灯",
+      "intent": "Light On",
+      "entities": [
+        {
+          "entity": "颜色",
+          "startPos": 1,
+          "endPos": 1,
+          "children": []
+        },
+        {
+          "entity": "位置",
+          "startPos": 2,
+          "endPos": 4,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "打开灯",
+      "intent": "All On",
+      "entities": [
+        {
+          "entity": "颜色",
+          "startPos": 1,
+          "endPos": 1,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "打开空调",
+      "intent": "AC On",
+      "entities": []
+    },
+    {
+      "text": "把全部的灯都打开",
+      "intent": "All On",
+      "entities": [
+        {
+          "entity": "颜色",
+          "startPos": 7,
+          "endPos": 7,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "把台灯变成绿色",
+      "intent": "Light On",
+      "entities": [
+        {
+          "entity": "位置",
+          "startPos": 1,
+          "endPos": 1,
+          "children": []
+        },
+        {
+          "entity": "颜色",
+          "startPos": 5,
+          "endPos": 6,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "把台灯变成绿色？",
+      "intent": "Light On",
+      "entities": [
+        {
+          "entity": "位置",
+          "startPos": 1,
+          "endPos": 1,
+          "children": []
+        },
+        {
+          "entity": "颜色",
+          "startPos": 5,
+          "endPos": 6,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "把台灯变成黄色",
+      "intent": "Light On",
+      "entities": [
+        {
+          "entity": "位置",
+          "startPos": 1,
+          "endPos": 1,
+          "children": []
+        },
+        {
+          "entity": "颜色",
+          "startPos": 5,
+          "endPos": 6,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "把台灯变成黄色？",
+      "intent": "Light On",
+      "entities": [
+        {
+          "entity": "位置",
+          "startPos": 1,
+          "endPos": 1,
+          "children": []
+        },
+        {
+          "entity": "颜色",
+          "startPos": 5,
+          "endPos": 6,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "把右边的灯关了",
+      "intent": "Light Off",
+      "entities": [
+        {
+          "entity": "位置",
+          "startPos": 1,
+          "endPos": 2,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "把右边的灯关闭",
+      "intent": "Light Off",
+      "entities": [
+        {
+          "entity": "位置",
+          "startPos": 1,
+          "endPos": 2,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "把地上的灯变成黄色",
+      "intent": "Light On",
+      "entities": [
+        {
+          "entity": "位置",
+          "startPos": 1,
+          "endPos": 2,
+          "children": []
+        },
+        {
+          "entity": "颜色",
+          "startPos": 7,
+          "endPos": 8,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "把地板上的灯变成绿色",
+      "intent": "Light On",
+      "entities": [
+        {
+          "entity": "位置",
+          "startPos": 1,
+          "endPos": 3,
+          "children": []
+        },
+        {
+          "entity": "颜色",
+          "startPos": 8,
+          "endPos": 9,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "把地板上的灯变成绿色？",
+      "intent": "Light On",
+      "entities": [
+        {
+          "entity": "位置",
+          "startPos": 1,
+          "endPos": 3,
+          "children": []
+        },
+        {
+          "entity": "颜色",
+          "startPos": 8,
+          "endPos": 9,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "把地板上的灯打开",
+      "intent": "Light On",
+      "entities": [
+        {
+          "entity": "位置",
+          "startPos": 1,
+          "endPos": 3,
+          "children": []
+        },
+        {
+          "entity": "颜色",
+          "startPos": 7,
+          "endPos": 7,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "把左边的灯关了",
+      "intent": "Light Off",
+      "entities": [
+        {
+          "entity": "位置",
+          "startPos": 1,
+          "endPos": 2,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "把左边的灯关闭",
+      "intent": "Light Off",
+      "entities": [
+        {
+          "entity": "位置",
+          "startPos": 1,
+          "endPos": 2,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "把所有灯打开",
+      "intent": "All On",
+      "entities": [
+        {
+          "entity": "颜色",
+          "startPos": 5,
+          "endPos": 5,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "把所有的灯变成绿色",
+      "intent": "All On",
+      "entities": [
+        {
+          "entity": "颜色",
+          "startPos": 7,
+          "endPos": 8,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "把所有的灯变成黄色",
+      "intent": "All On",
+      "entities": [
+        {
+          "entity": "颜色",
+          "startPos": 7,
+          "endPos": 8,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "把所有的灯都关了",
+      "intent": "All Off",
+      "entities": []
+    },
+    {
+      "text": "把桌子上灯打开",
+      "intent": "Light On",
+      "entities": [
+        {
+          "entity": "位置",
+          "startPos": 1,
+          "endPos": 3,
+          "children": []
+        },
+        {
+          "entity": "颜色",
+          "startPos": 6,
+          "endPos": 6,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "把温度调低3度",
+      "intent": "AC Down",
+      "entities": [
+        {
+          "entity": "AcOn",
+          "startPos": 1,
+          "endPos": 2,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "把温度调高5度",
+      "intent": "AC Up",
+      "entities": [
+        {
+          "entity": "AcOn",
+          "startPos": 1,
+          "endPos": 2,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "把湿度设置为60%",
+      "intent": "AC On",
+      "entities": [
+        {
+          "entity": "Humidity",
+          "startPos": 1,
+          "endPos": 2,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "把湿度调低20%",
+      "intent": "AC Down",
+      "entities": [
+        {
+          "entity": "Humidity",
+          "startPos": 1,
+          "endPos": 2,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "把空调关了",
+      "intent": "AC Off",
+      "entities": []
+    },
+    {
+      "text": "桌子上的灯变成黄色",
+      "intent": "Light On",
+      "entities": [
+        {
+          "entity": "位置",
+          "startPos": 0,
+          "endPos": 2,
+          "children": []
+        },
+        {
+          "entity": "颜色",
+          "startPos": 7,
+          "endPos": 8,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "温度升高1度",
+      "intent": "AC Up",
+      "entities": [
+        {
+          "entity": "AcOn",
+          "startPos": 0,
+          "endPos": 1,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "温度提升3度",
+      "intent": "AC Up",
+      "entities": [
+        {
+          "entity": "AcOn",
+          "startPos": 0,
+          "endPos": 1,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "温度设置为31度",
+      "intent": "AC On",
+      "entities": [
+        {
+          "entity": "AcOn",
+          "startPos": 0,
+          "endPos": 1,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "温度降低1度",
+      "intent": "AC Down",
+      "entities": [
+        {
+          "entity": "AcOn",
+          "startPos": 0,
+          "endPos": 1,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "湿度提升30%",
+      "intent": "AC Up",
+      "entities": [
+        {
+          "entity": "Humidity",
+          "startPos": 0,
+          "endPos": 1,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "湿度设置为50%",
+      "intent": "AC On",
+      "entities": [
+        {
+          "entity": "Humidity",
+          "startPos": 0,
+          "endPos": 1,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "湿度降低50%",
+      "intent": "AC Down",
+      "entities": [
+        {
+          "entity": "Humidity",
+          "startPos": 0,
+          "endPos": 1,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "点亮全部灯",
+      "intent": "All On",
+      "entities": [
+        {
+          "entity": "颜色",
+          "startPos": 0,
+          "endPos": 1,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "点亮所有的灯",
+      "intent": "All On",
+      "entities": [
+        {
+          "entity": "颜色",
+          "startPos": 0,
+          "endPos": 1,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "熄灭所有的灯",
+      "intent": "All Off",
+      "entities": []
+    },
+    {
+      "text": "设置温度为25度",
+      "intent": "AC On",
+      "entities": [
+        {
+          "entity": "AcOn",
+          "startPos": 2,
+          "endPos": 3,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "设置湿度为60%",
+      "intent": "AC On",
+      "entities": [
+        {
+          "entity": "Humidity",
+          "startPos": 2,
+          "endPos": 3,
+          "children": []
+        }
+      ]
+    }
+  ],
+  "versionId": "0.1",
+  "name": "智能家居",
+  "desc": "",
+  "culture": "zh-cn",
+  "tokenizerVersion": "1.0.0",
+  "patternAnyEntities": [],
+  "regex_entities": [],
+  "phraselists": [],
+  "regex_features": [],
+  "patterns": [],
+  "settings": []
+}

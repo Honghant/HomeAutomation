@@ -1,0 +1,772 @@
+{
+  "luis_schema_version": "7.0.0",
+  "intents": [
+    {
+      "name": "AC Down",
+      "features": []
+    },
+    {
+      "name": "AC Off",
+      "features": []
+    },
+    {
+      "name": "AC On",
+      "features": []
+    },
+    {
+      "name": "AC Up",
+      "features": []
+    },
+    {
+      "name": "All Off",
+      "features": []
+    },
+    {
+      "name": "All On",
+      "features": []
+    },
+    {
+      "name": "Light Off",
+      "features": []
+    },
+    {
+      "name": "Light On",
+      "features": []
+    },
+    {
+      "name": "None",
+      "features": []
+    }
+  ],
+  "entities": [
+    {
+      "name": "AcOn",
+      "children": [],
+      "roles": [],
+      "features": []
+    },
+    {
+      "name": "AirCon",
+      "children": [],
+      "roles": [],
+      "features": []
+    },
+    {
+      "name": "color",
+      "children": [],
+      "roles": [],
+      "features": []
+    },
+    {
+      "name": "EndofProj",
+      "children": [],
+      "roles": [],
+      "features": []
+    },
+    {
+      "name": "Humidity",
+      "children": [],
+      "roles": [],
+      "features": []
+    },
+    {
+      "name": "light",
+      "children": [],
+      "roles": [],
+      "features": []
+    },
+    {
+      "name": "location",
+      "children": [],
+      "roles": [],
+      "features": []
+    }
+  ],
+  "hierarchicals": [],
+  "composites": [],
+  "closedLists": [],
+  "prebuiltEntities": [
+    {
+      "name": "datetimeV2",
+      "roles": [
+        "Duration",
+        "Time"
+      ]
+    },
+    {
+      "name": "number",
+      "roles": []
+    },
+    {
+      "name": "ordinal",
+      "roles": []
+    },
+    {
+      "name": "percentage",
+      "roles": []
+    },
+    {
+      "name": "temperature",
+      "roles": []
+    }
+  ],
+  "utterances": [
+    {
+      "text": "all lights off",
+      "intent": "All Off",
+      "entities": []
+    },
+    {
+      "text": "all lights off.",
+      "intent": "All Off",
+      "entities": []
+    },
+    {
+      "text": "change all the color yellow",
+      "intent": "All On",
+      "entities": [
+        {
+          "entity": "color",
+          "startPos": 21,
+          "endPos": 26,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "change all the lights to green",
+      "intent": "All On",
+      "entities": [
+        {
+          "entity": "color",
+          "startPos": 25,
+          "endPos": 29,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "change all the lights to yellow",
+      "intent": "All On",
+      "entities": [
+        {
+          "entity": "color",
+          "startPos": 25,
+          "endPos": 30,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "change the light on the desk to green",
+      "intent": "Light On",
+      "entities": [
+        {
+          "entity": "light",
+          "startPos": 11,
+          "endPos": 15,
+          "children": []
+        },
+        {
+          "entity": "location",
+          "startPos": 17,
+          "endPos": 27,
+          "children": []
+        },
+        {
+          "entity": "color",
+          "startPos": 32,
+          "endPos": 36,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "change the light on the desk to yellow",
+      "intent": "Light On",
+      "entities": [
+        {
+          "entity": "light",
+          "startPos": 11,
+          "endPos": 15,
+          "children": []
+        },
+        {
+          "entity": "location",
+          "startPos": 17,
+          "endPos": 27,
+          "children": []
+        },
+        {
+          "entity": "color",
+          "startPos": 32,
+          "endPos": 37,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "change the light on the floor to green",
+      "intent": "Light On",
+      "entities": [
+        {
+          "entity": "light",
+          "startPos": 11,
+          "endPos": 15,
+          "children": []
+        },
+        {
+          "entity": "location",
+          "startPos": 17,
+          "endPos": 28,
+          "children": []
+        },
+        {
+          "entity": "color",
+          "startPos": 33,
+          "endPos": 37,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "change the light on the floor to yellow",
+      "intent": "Light On",
+      "entities": [
+        {
+          "entity": "light",
+          "startPos": 11,
+          "endPos": 15,
+          "children": []
+        },
+        {
+          "entity": "location",
+          "startPos": 17,
+          "endPos": 28,
+          "children": []
+        },
+        {
+          "entity": "color",
+          "startPos": 33,
+          "endPos": 38,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "end",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "EndofProj",
+          "startPos": 0,
+          "endPos": 2,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "humidity lower 10 %",
+      "intent": "AC Down",
+      "entities": [
+        {
+          "entity": "Humidity",
+          "startPos": 0,
+          "endPos": 7,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "humidity up 10%",
+      "intent": "AC Up",
+      "entities": [
+        {
+          "entity": "Humidity",
+          "startPos": 0,
+          "endPos": 7,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "lower the humidity by 10%",
+      "intent": "AC Down",
+      "entities": [
+        {
+          "entity": "Humidity",
+          "startPos": 10,
+          "endPos": 17,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "lower the temperature by 1 degree",
+      "intent": "AC Down",
+      "entities": []
+    },
+    {
+      "text": "lower the temperature by 4 degrees",
+      "intent": "AC Down",
+      "entities": []
+    },
+    {
+      "text": "lower the temperature by 6 degrees",
+      "intent": "AC Down",
+      "entities": []
+    },
+    {
+      "text": "raise the temperature by 1 degree",
+      "intent": "AC Up",
+      "entities": []
+    },
+    {
+      "text": "raise the temperature by 3 degrees",
+      "intent": "AC Up",
+      "entities": []
+    },
+    {
+      "text": "set the air condition to 26 degrees",
+      "intent": "AC On",
+      "entities": []
+    },
+    {
+      "text": "set the humidity to 30 percentage",
+      "intent": "AC On",
+      "entities": [
+        {
+          "entity": "Humidity",
+          "startPos": 8,
+          "endPos": 15,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "set the humidity to 40 %",
+      "intent": "AC On",
+      "entities": [
+        {
+          "entity": "Humidity",
+          "startPos": 8,
+          "endPos": 15,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "set the temperature to 20 degrees",
+      "intent": "AC On",
+      "entities": [
+        {
+          "entity": "AcOn",
+          "startPos": 8,
+          "endPos": 18,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "set the temperature to 25 degrees",
+      "intent": "AC On",
+      "entities": [
+        {
+          "entity": "AcOn",
+          "startPos": 8,
+          "endPos": 18,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "set the temperature to 26",
+      "intent": "AC On",
+      "entities": [
+        {
+          "entity": "AcOn",
+          "startPos": 8,
+          "endPos": 18,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "set the temperature to 26 degrees",
+      "intent": "AC On",
+      "entities": []
+    },
+    {
+      "text": "set the temperature to 30 degrees",
+      "intent": "AC On",
+      "entities": [
+        {
+          "entity": "AcOn",
+          "startPos": 8,
+          "endPos": 18,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "set the temperature to 31 degrees",
+      "intent": "AC On",
+      "entities": [
+        {
+          "entity": "AcOn",
+          "startPos": 8,
+          "endPos": 18,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "stop",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "EndofProj",
+          "startPos": 0,
+          "endPos": 3,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "stop detecting",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "EndofProj",
+          "startPos": 0,
+          "endPos": 3,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "temperature lower 1 degree",
+      "intent": "AC Down",
+      "entities": []
+    },
+    {
+      "text": "temperature up 1 degree",
+      "intent": "AC Up",
+      "entities": []
+    },
+    {
+      "text": "that's an end",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "EndofProj",
+          "startPos": 10,
+          "endPos": 12,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "turn all the lights on",
+      "intent": "All On",
+      "entities": [
+        {
+          "entity": "light",
+          "startPos": 13,
+          "endPos": 18,
+          "children": []
+        },
+        {
+          "entity": "color",
+          "startPos": 20,
+          "endPos": 21,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "turn all the lights on.",
+      "intent": "All On",
+      "entities": [
+        {
+          "entity": "color",
+          "startPos": 20,
+          "endPos": 21,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "turn all the lights to green",
+      "intent": "All On",
+      "entities": [
+        {
+          "entity": "color",
+          "startPos": 23,
+          "endPos": 27,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "turn all the lights to yellow",
+      "intent": "All On",
+      "entities": [
+        {
+          "entity": "color",
+          "startPos": 23,
+          "endPos": 28,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "turn down the air condition by 3 degrees",
+      "intent": "AC Down",
+      "entities": []
+    },
+    {
+      "text": "turn off all the lights",
+      "intent": "All Off",
+      "entities": [
+        {
+          "entity": "light",
+          "startPos": 17,
+          "endPos": 22,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "turn off the ac",
+      "intent": "AC Off",
+      "entities": [
+        {
+          "entity": "AirCon",
+          "startPos": 13,
+          "endPos": 14,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "turn off the air condition",
+      "intent": "AC Off",
+      "entities": [
+        {
+          "entity": "AirCon",
+          "startPos": 13,
+          "endPos": 25,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "turn off the light on the desk",
+      "intent": "Light Off",
+      "entities": [
+        {
+          "entity": "light",
+          "startPos": 13,
+          "endPos": 17,
+          "children": []
+        },
+        {
+          "entity": "location",
+          "startPos": 19,
+          "endPos": 29,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "turn off the light on the floor",
+      "intent": "Light Off",
+      "entities": [
+        {
+          "entity": "light",
+          "startPos": 13,
+          "endPos": 17,
+          "children": []
+        },
+        {
+          "entity": "location",
+          "startPos": 19,
+          "endPos": 30,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "turn off the light on the left",
+      "intent": "Light Off",
+      "entities": [
+        {
+          "entity": "light",
+          "startPos": 13,
+          "endPos": 17,
+          "children": []
+        },
+        {
+          "entity": "location",
+          "startPos": 19,
+          "endPos": 29,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "turn off the light on the right",
+      "intent": "Light Off",
+      "entities": [
+        {
+          "entity": "light",
+          "startPos": 13,
+          "endPos": 17,
+          "children": []
+        },
+        {
+          "entity": "location",
+          "startPos": 19,
+          "endPos": 30,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "turn on the ac",
+      "intent": "AC On",
+      "entities": []
+    },
+    {
+      "text": "turn on the air condition",
+      "intent": "AC On",
+      "entities": []
+    },
+    {
+      "text": "turn on the light on the desk",
+      "intent": "Light On",
+      "entities": [
+        {
+          "entity": "color",
+          "startPos": 5,
+          "endPos": 6,
+          "children": []
+        },
+        {
+          "entity": "light",
+          "startPos": 12,
+          "endPos": 16,
+          "children": []
+        },
+        {
+          "entity": "location",
+          "startPos": 18,
+          "endPos": 28,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "turn on the light on the floor",
+      "intent": "Light On",
+      "entities": [
+        {
+          "entity": "color",
+          "startPos": 5,
+          "endPos": 6,
+          "children": []
+        },
+        {
+          "entity": "light",
+          "startPos": 12,
+          "endPos": 16,
+          "children": []
+        },
+        {
+          "entity": "location",
+          "startPos": 18,
+          "endPos": 29,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "turn on the light on the left",
+      "intent": "Light On",
+      "entities": [
+        {
+          "entity": "color",
+          "startPos": 5,
+          "endPos": 6,
+          "children": []
+        },
+        {
+          "entity": "light",
+          "startPos": 12,
+          "endPos": 16,
+          "children": []
+        },
+        {
+          "entity": "location",
+          "startPos": 18,
+          "endPos": 28,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "turn on the light on the right",
+      "intent": "Light On",
+      "entities": [
+        {
+          "entity": "color",
+          "startPos": 5,
+          "endPos": 6,
+          "children": []
+        },
+        {
+          "entity": "light",
+          "startPos": 12,
+          "endPos": 16,
+          "children": []
+        },
+        {
+          "entity": "location",
+          "startPos": 18,
+          "endPos": 29,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "turn on the lights",
+      "intent": "All On",
+      "entities": [
+        {
+          "entity": "color",
+          "startPos": 5,
+          "endPos": 6,
+          "children": []
+        },
+        {
+          "entity": "light",
+          "startPos": 12,
+          "endPos": 17,
+          "children": []
+        }
+      ]
+    }
+  ],
+  "versionId": "0.1",
+  "name": "HomeAutomation",
+  "desc": "",
+  "culture": "en-us",
+  "tokenizerVersion": "1.0.0",
+  "patternAnyEntities": [],
+  "regex_entities": [],
+  "phraselists": [],
+  "regex_features": [],
+  "patterns": [],
+  "settings": []
+}

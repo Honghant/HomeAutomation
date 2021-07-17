@@ -80,7 +80,7 @@ def Read(Subscription,Region,lang,win_con):
                     win_con['-Temp-'].update(temper)
                     win_con['-Temp-Slider-'].update(temper)
                 elif ("Humidity" in entity or "percentage" in entity):
-                    humi = entity['-number-'][0]
+                    humi = entity['number'][0]
                     win_con['-Hum-'].update(humi)
                     win_con['-Hum-Slider-'].update(humi)
                 result = "AC"
